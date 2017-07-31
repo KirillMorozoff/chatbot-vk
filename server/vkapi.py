@@ -133,8 +133,8 @@ def tone_answer():
 #Поиск фотографий по лицу
 ############################################################################################################################
 
-key = "JFVcKkyuyiVPmoJ8OxZ9z_UQIIMpotpr"
-secret = "DfpHhYpdDLxLyLXjvpcBhj9Wd7C8Oj6Z"
+key = "your key"
+secret = "your secret"
 
 def search_face(image_url, outer_id):
     r = requests.post("https://api-us.faceplusplus.com/facepp/v3/search", data={'api_key': key, 'api_secret': secret, 'image_url': image_url, 'outer_id': outer_id, 'return_result_count': "5"})
