@@ -7,16 +7,16 @@ from os import listdir
 from urllib.request import urlretrieve
 import vk, os, time, math
 
-key = "JFVcKkyuyiVPmoJ8OxZ9z_UQIIMpotpr"
-secret = "DfpHhYpdDLxLyLXjvpcBhj9Wd7C8Oj6Z"
+key = "you key"
+secret = "you secret"
 
 
 
 #    Формирование списков фотографий
 ########################################################################################################################
 def vk_photos_get(album_url):
-    login = 'grifx.design@gmail.com'
-    password = 'Fugarent3'
+    login = 'your login'
+    password = 'your password'
     vk_id = '6120276'
     session = vk.AuthSession(app_id=vk_id, user_login=login, user_password=password)
     vkapi = vk.API(session)
@@ -36,8 +36,8 @@ def vk_photos_get(album_url):
     return photos_list
 
 def vk_list(album_url):
-    login = 'grifx.design@gmail.com'
-    password = 'Fugarent3'
+    login = 'your login'
+    password = 'your password'
     vk_id = '6120276'
     session = vk.AuthSession(app_id=vk_id, user_login=login, user_password=password)
     vkapi = vk.API(session)
@@ -114,7 +114,6 @@ def search_face(image_url, outer_id):
 ########################################################################################################################
 
 creating_faceset("Faces013", "faces_test_013")
-#Зачем-то, необходимо писать букву "r" перед путем к файлу
 add_faces('faces_test_013', create_face_token_list(vk_list("https://vk.com/album-147469960_244513401"), vk_photos_get("https://vk.com/album-147469960_244513401")))
 
 #face_token_get('http://www.a-listinternational.com/wp-content/uploads/2016/06/brad-pitt-doesn-t-really-look-much-like-brad-pitt-in-these-photos-727400.jpg')
